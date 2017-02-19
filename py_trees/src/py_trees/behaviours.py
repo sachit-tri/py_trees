@@ -26,6 +26,8 @@ import rospy
 from . import logging
 from .common import Status
 from .behaviour import Behaviour
+
+from . import composites
 from . import meta
 
 ##############################################################################
@@ -197,3 +199,12 @@ class Condition(Behaviour):
                 self.stop(Status.SUCCESS)
                 break
         yield self
+
+##############################################################################
+# Composite Behaviours
+##############################################################################
+
+@meta.oneshot
+class OneshotSequence(composites.Sequence):
+    pass
+

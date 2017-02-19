@@ -31,7 +31,6 @@ from . import common
 from . import logging
 from .behaviour import Behaviour
 from .common import Status
-from . import meta
 
 ##############################################################################
 # Composites
@@ -464,12 +463,8 @@ class Sequence(Composite):
         Composite.stop(self, new_status)
 
 
-@meta.oneshot
-class OneshotSequence(Sequence):
-    pass
-
 ##############################################################################
-# Paralllel
+# Parallel
 ##############################################################################
 
 
