@@ -20,6 +20,7 @@ from . import common
 from . import composites
 from . import console
 from . import demos
+from . import decorators
 from . import display
 from . import logging
 from . import meta
